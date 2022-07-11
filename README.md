@@ -5,7 +5,7 @@
 
 Ui/UX //
 Front-End  //
-Grafich Design //
+Graphic  Design //
 by Vitali Pisani
 
 
