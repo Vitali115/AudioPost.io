@@ -192,10 +192,12 @@ function AudioPlayer({ file }) {
       <section className="post">
         <div className="post--acc">
           <div className="post--data--user">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Solid_white_bordered.svg/600px-Solid_white_bordered.svg.png"
-              alt="post--avatar"
-            />
+            <IconButton>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Solid_white_bordered.svg/600px-Solid_white_bordered.svg.png"
+                alt="post--avatar"
+              />
+            </IconButton>
             <h3>Nome</h3>
             <p>1 hr ago</p>
           </div>

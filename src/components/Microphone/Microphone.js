@@ -2,9 +2,8 @@ import React, { useState, useRef, useEffect } from "react";
 import { ReactMic } from "react-mic";
 import WaveSurfer from "wavesurfer";
 
-import { makeStyles } from "@material-ui/core/styles";
 import MicIcon from "@material-ui/icons/Mic";
-import IconButton from "@material-ui/core/IconButton";
+
 import StopIcon from "@material-ui/icons/Stop";
 import ReplayIcon from "@material-ui/icons/Replay";
 import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
@@ -23,7 +22,8 @@ import Grid from "@material-ui/core/Grid";
 import { green, red, blue } from "@material-ui/core/colors";
 
 import "./microphone.css";
-
+import { makeStyles } from "@material-ui/core/styles";
+import IconButton from "@material-ui/core/IconButton";
 const useStyles = makeStyles((theme) => ({
   icon: {
     height: 38,
@@ -59,11 +59,11 @@ export default function Microphone({ pushFile }) {
     wavesurfer.current = WaveSurfer.create({
       container: "#wavesurfer-id",
       waveColor: "grey",
-      progressColor: "tomato",
+      progressColor: "#00FFB1",
       height: 140,
-      cursorWidth: 1,
-      cursorColor: "lightgrey",
-      barWidth: 2,
+      cursorWidth: 9,
+      cursorColor: "#00FFB1",
+      barWidth: 6,
       normalize: true,
       responsive: true,
       fillParent: true
@@ -142,20 +142,20 @@ export default function Microphone({ pushFile }) {
       <Grid container justify="center">
         <Grid item>
           <IconButton onClick={handleClickOpen}>
-            <MicIcon className={classes.icon} />
+            <div className="record--button">
+              <MicIcon className={classes.icon} />
+              <p>Record a Post</p>
+            </div>
           </IconButton>
         </Grid>
       </Grid>
-      <Dialog
-        className="audio"
-        maxWidth="sm"
-        open={open}
-        onClose={handleCancel}
-      >
-        <DialogTitle className="audio">Record Post</DialogTitle>
+      <Dialog maxWidth="sm" open={open} onClose={handleCancel}>
+        <DialogTitle style={{ fontWeight: "bold", fontFamily: "inter" }}>
+          Record Post
+        </DialogTitle>
         <DialogContent>
           {tempFile ? (
-            <div className="audio" id="wavesurfer-id" />
+            <div id="wavesurfer-id" />
           ) : (
             <ReactMic
               record={record}
@@ -189,7 +189,7 @@ export default function Microphone({ pushFile }) {
               {!record && !tempFile && (
                 <IconButton onClick={startRecording}>
                   <FiberManualRecordIcon
-                    style={{ color: red[500] }}
+                    style={{ color: "#00FFB1" }}
                     className={classes.icon}
                   />
                 </IconButton>
@@ -209,13 +209,13 @@ export default function Microphone({ pushFile }) {
 
               <IconButton onClick={handleDone}>
                 <DoneIcon
-                  style={tempFile && !record ? { color: green[500] } : {}}
+                  style={tempFile && !record ? { color: "green"[500] } : {}}
                   className={classes.icon}
                 />
               </IconButton>
               <IconButton onClick={handleCancel}>
                 <CancelIcon
-                  style={tempFile && !record ? { color: red[500] } : {}}
+                  style={tempFile && !record ? { color: "#00FFB1"[500] } : {}}
                   className={classes.icon}
                 />
               </IconButton>
