@@ -22,7 +22,7 @@ import {
 } from "react-icons/ri";
 
 import "./styles.scss";
-
+import Microphone from "./components/Microphone/Microphone";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
@@ -80,6 +80,7 @@ export default function LeftMenu() {
           }}
         >
           <RiMicLine className="ico" />
+
           <p>Post</p>
         </div>
       </section>

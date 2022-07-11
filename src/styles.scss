@@ -34,10 +34,10 @@ body{
   color: white;
   font-family: 'Inter', sans-serif;
 }
-#waveform {
-  width: 100%;
-  overflow-y: hidden;
-  }
+// #waveform {
+//   width: 100%;
+//   overflow-y: hidden;
+//   }
   //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  // // //   
 
 .post{
@@ -104,9 +104,10 @@ font-size: var(--title);
   height: 50px;
     line-height: 1;
     border-radius: 100px;
-    font-size: 22px;
+    font-size: 20px;
   margin-right: 5px;
   }
+ 
 }
   //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  // // //   
 .header{
