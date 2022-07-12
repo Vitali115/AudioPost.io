@@ -40,36 +40,49 @@ import WaveSurfer from "wavesurfer";
 //               app            //
 
 export default function Homepage() {
+  const trends = [
+    {
+      id: 1,
+      tag: "#Trend1"
+    },
+    {
+      id: 2,
+      tag: "#Trend2"
+    },
+    {
+      id: 3,
+      tag: "#Trend3"
+    },
+    {
+      id: 4,
+      tag: "#Trend4"
+    },
+    {
+      id: 5,
+      tag: "#Trend5"
+    },
+    {
+      id: 6,
+      tag: "#Trend6"
+    }
+  ];
   return (
     <>
       <section className="trend--feed">
         <div>
           <h2>Trends from world</h2>
-          <section>
-            <div className="trend--option">
-              {/* <RiBookmarkLine /> */}
-              <p>#Trend</p>
-              {/* <div className="post--data--played">
-        <RiPlayMiniLine />
-        <p>2mln</p>
-      </div> */}
-            </div>
-            <div className="trend--option">
-              {/* <RiBookmarkLine /> */}
-              <p>#Trend</p>
-              {/* <div className="post--data--played">
-        <RiPlayMiniLine />
-        <p>2mln</p>
-      </div> */}
-            </div>
-            <div className="trend--option">
-              {/* <RiBookmarkLine /> */}
-              <p>#Trend</p>
-              {/* <div className="post--data--played">
-        <RiPlayMiniLine />
-        <p>2mln</p>
-      </div> */}
-            </div>
+         <br/>
+         <section>
+            {trends.map((el) => {
+              const { tag } = el;
+              return (
+                <div className="trend--option">
+                  {/* <RiBookmarkLine /> */}
+                  <p>{tag}</p>
+                  <div className="post--data--played"></div>
+                </div>
+              );
+            })}
           </section>
         </div>
       </section>

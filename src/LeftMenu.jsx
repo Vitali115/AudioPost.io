@@ -22,7 +22,7 @@ import {
 } from "react-icons/ri";
 
 import "./styles.scss";
-import Microphone from "./components/Microphone/Microphone";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {

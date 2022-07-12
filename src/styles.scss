@@ -53,8 +53,20 @@ background-color: var(--bgCard);
     justify-content: space-between;
     padding: 1px;
     .post--data--user{
+
+      h3, p{
+        margin-top: 16px;
+      }
+      margin-bottom: -6px;
       display: flex;
+    p{
+      border-left: 2px solid var(--bgCard);
+      margin-left: 5px;
+      color: grey;
+    }
+
       h3{
+  
 font-size: var(--title);
       }
       img{
@@ -90,14 +102,18 @@ font-size: var(--title);
     }
   }
 }
+
+
 .post--data--played{
   display: flex;
   line-height: 1;
+
+
 }
 .post--audio--progressBar{
   display: flex;
   .post--play{
-    margin-top: 38px;
+    margin-top: 27px;
     background-color: white;
     color: black;
   width: 50px;
@@ -109,6 +125,15 @@ font-size: var(--title);
   }
  
 }
+.post--text{
+
+  h2{
+    padding-left: 15px;
+    font-size: 2px;
+}
+}
+
+
   //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  // // //   
 .header{
   background: transparentize(rgb(0, 0, 0), 0.9);
@@ -177,14 +202,21 @@ h2{
   font-size: var(--title);
 }
 .trend--option{
-  background-color: var(--bgCard);
+  background-color: black;
   padding: 6px 7px;
   border-radius: var(--radius);
   margin-bottom: 20px;
   display: flex;
+  width: 250px;
   justify-content: space-between;
+
 }
 }
+
+.trend--option:hover{
+  background-color: var(--bgCard);
+}
+
 .markup--page{
   margin-top: 60px;
   display:flex;

@@ -25,7 +25,7 @@ import {
   RiPauseMiniFill
 } from "react-icons/ri";
 
-import "./style.scss";
+import "../../styles.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -43,11 +43,7 @@ import { Redirect } from "react-router-dom";
 //               app            //
 
 import { makeStyles } from "@material-ui/core/styles";
-import Avatar from "@material-ui/core/Avatar";
-import Card from "@material-ui/core/Card";
-import CardMedia from "@material-ui/core/CardMedia";
-import CardContent from "@material-ui/core/CardContent";
-import Typography from "@material-ui/core/Typography";
+
 import IconButton from "@material-ui/core/IconButton";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
 import StopIcon from "@material-ui/icons/Stop";
@@ -198,18 +194,19 @@ function AudioPlayer({ file }) {
                 alt="post--avatar"
               />
             </IconButton>
+
             <h3>Nome</h3>
             <p>1 hr ago</p>
           </div>
 
           <div className="post--data--played">
             <RiPlayMiniLine className="ico" />
-            <p></p>
+            <p>100</p>
           </div>
         </div>
 
         <div className="post--text">
-          <h2></h2>
+          <h2 style={{ fontSize: 19 }}>Title of Post</h2>
         </div>
         <hr />
 
