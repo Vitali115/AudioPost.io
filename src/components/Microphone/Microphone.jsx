@@ -8,13 +8,13 @@ import Grid from "@material-ui/core/Grid";
 
 import StopIcon from "@material-ui/icons/Stop";
 
-import ReplayIcon from "@material-ui/icons/Replay";
+import ArrowBackIcon from "@material-ui/icons//ArrowBack";
 
 import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
 
 import DoneIcon from "@material-ui/icons/Done";
 
-import CancelIcon from "@material-ui/icons/Cancel";
+import CloseIcon from "@material-ui/icons/Close";
 
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
 
@@ -77,10 +77,10 @@ export default function Microphone({ pushFile }) {
       container: "#wavesurfer-id",
       waveColor: "grey",
       progressColor: "#00FFB1",
-      height: 140,
+      height: 200,
       cursorWidth: 9,
       cursorColor: "#00FFB1",
-      barWidth: 6,
+      barWidth: 3,
       normalize: true,
       responsive: true,
       fillParent: true
@@ -166,7 +166,12 @@ export default function Microphone({ pushFile }) {
           </IconButton>
         </Grid>
       </Grid>
-      <Dialog maxWidth="sm" open={open} onClose={handleCancel}>
+      <hr />
+      <Dialog
+        className="dialog--create-post"
+        open={open}
+        onClose={handleCancel}
+      >
         <div
           style={{
             backgroundColor: "black",
@@ -178,12 +183,12 @@ export default function Microphone({ pushFile }) {
         >
           {!record && tempFile && (
             <IconButton onClick={startRecording}>
-              <ReplayIcon className={classes.icon} />
+              <ArrowBackIcon className={classes.icon} />
             </IconButton>
           )}
           <img
             style={{
-              height: 30,
+              height: 40,
               marginBottom: 15,
               marginTop: 15,
               marginLeft: 15
@@ -192,7 +197,7 @@ export default function Microphone({ pushFile }) {
             alt="logo"
           />{" "}
           <IconButton onClick={handleCancel}>
-            <CancelIcon
+            <CloseIcon
               style={tempFile && !record ? { color: "#FF0066" } : {}}
               className={classes.icon}
             />
@@ -205,7 +210,7 @@ export default function Microphone({ pushFile }) {
 
         <DialogContent>
           {tempFile ? (
-            <div id="wavesurfer-id" />
+            <div className="wawe--recorded" id="wavesurfer-id" />
           ) : (
             <ReactMic
               record={record}
@@ -273,7 +278,7 @@ export default function Microphone({ pushFile }) {
                 <IconButton onClick={stopRecording}>
                   <div className="record--interactions">
                     <StopIcon
-                      style={{ color: "#00FFB1", height: 38, width: 38 }}
+                      style={{ color: "#FF0066", height: 38, width: 38 }}
                     />
 
                     <p style={{ fontSize: 16, color: "white", marginTop: 6 }}>
@@ -297,7 +302,7 @@ export default function Microphone({ pushFile }) {
                     {!record && tempFile && (
                       <p style={{ fontSize: 16, color: "white", marginTop: 6 }}>
                         {" "}
-                        pubblica
+                        Pubblica
                       </p>
                     )}
                   </div>

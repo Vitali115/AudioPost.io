@@ -1,6 +1,11 @@
 .MuiDialog-paperWidthSm {
   max-width: 600px;
+
+  
   flex: 1;
+  // @media screen and (max-width: 992px){
+    
+  // }
 }
 
 .audio {
@@ -48,7 +53,11 @@
 .record--interactions{
   display: flex;
   border: 1px solid white;
-  padding: 1px 9px 0 8px;
+  padding: 1px 14px 0 6px;
   border-radius: 8px;
   padding-top: 5px;
+}
+
+.wawe--recorded{
+  margin-bottom: 35px;
 }

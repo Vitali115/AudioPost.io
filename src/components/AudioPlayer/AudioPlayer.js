@@ -185,7 +185,7 @@ function AudioPlayer({ file }) {
 
   return (
     <>
-      <section className="post">
+      <section className="post" stlye={{ backgroundColor: "black" }}>
         <div className="post--acc">
           <div className="post--data--user">
             <IconButton>
@@ -199,7 +199,7 @@ function AudioPlayer({ file }) {
             <p>1 hr ago</p>
           </div>
 
-          <div className="post--data--played">
+          <div className="post--interactions--option">
             <RiPlayMiniLine className="ico" />
             <p>100</p>
           </div>
@@ -262,7 +262,7 @@ function AudioPlayer({ file }) {
 
           <div className="post--interactions--option">
             <RiMicLine className="ico" />
-            <p>record</p>
+            <p>Record</p>
           </div>
 
           <div className="post--interactions--option">
@@ -271,6 +271,7 @@ function AudioPlayer({ file }) {
           </div>
         </div>
       </section>
+      <hr />
     </>
   );
 }

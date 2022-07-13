@@ -42,6 +42,7 @@ export default function LeftMenu() {
   return (
     <>
       <section className="user--menu--interactions">
+        <br />
         <div className="menu--option">
           <RiHome2Line className="ico" />
           <p>Home</p>
@@ -51,21 +52,21 @@ export default function LeftMenu() {
           <p>Explore</p>
         </div>
 
-        <div className="menu--option">
+        {/* <div className="menu--option">
           <RiNotificationLine className="ico" />
           <p>Notifications</p>
-        </div>
+        </div> */}
         <div className="menu--option">
           <RiBookmarkLine className="ico" />
           <p>Saved</p>
         </div>
-        <div className="menu--option">
+        {/* <div className="menu--option">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Solid_white_bordered.svg/600px-Solid_white_bordered.svg.png"
             alt="comments--avatar"
           />
           <p>Profile</p>
-        </div>
+        </div> */}
         <div className="menu--option">
           <RiSettings4Line className="ico" />
           <p>Settings</p>

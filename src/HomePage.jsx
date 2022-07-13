@@ -7,6 +7,7 @@ import Trend from "./RightMenu";
 import Grid from "@material-ui/core/Grid";
 import Microphone from "./components/Microphone/Microphone";
 import AudioPlayer from "./components/AudioPlayer/AudioPlayer";
+import Profile from "./Profile";
 export default function Homepage() {
   const [files, setFiles] = useState([null]);
   const pushFile = (file) => {
@@ -19,7 +20,9 @@ export default function Homepage() {
         <section className="markup--page">
           <Menu />
           <section>
+            <Profile />
             <Microphone pushFile={pushFile} />
+            <br />
             {files.map((file, index) => (
               <Grid key={index} item>
                 <AudioPlayer file={file} />

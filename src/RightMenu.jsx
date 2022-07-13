@@ -43,36 +43,51 @@ export default function Homepage() {
   const trends = [
     {
       id: 1,
-      tag: "#Trend1"
+      tag: "#BETA"
     },
     {
       id: 2,
-      tag: "#Trend2"
+      tag: "#IWASWONDERING"
     },
     {
       id: 3,
-      tag: "#Trend3"
-    },
-    {
-      id: 4,
-      tag: "#Trend4"
-    },
-    {
-      id: 5,
-      tag: "#Trend5"
-    },
-    {
-      id: 6,
-      tag: "#Trend6"
+      tag: "#BLACKLIVESMATTER"
     }
   ];
+
+  const update = [
+    {
+      id: 1,
+      tag: "MVP",
+      date: "10/07/2022"
+    }
+  ];
+
   return (
     <>
       <section className="trend--feed">
         <div>
+          <br />
+          <h2>Update</h2>
+          <hr />
+
+          {update.map((el) => {
+            const { tag, date } = el;
+            return (
+              <div className="trend--option">
+                {/* <RiBookmarkLine /> */}
+                <p>{tag}</p>
+                <p>{date}</p>
+                <div className="post--data--played"></div>
+              </div>
+            );
+          })}
+          <br />
+          <br />
           <h2>Trends from world</h2>
-         <br/>
-         <section>
+          <hr />
+
+          <section>
             {trends.map((el) => {
               const { tag } = el;
               return (
@@ -84,6 +99,16 @@ export default function Homepage() {
               );
             })}
           </section>
+          <br />
+          <br />
+          <h2>Alpha v.0.0.0</h2>
+          <hr />
+          <div className="update--box">
+            <img src="https://i.ibb.co/BCnfzG6/card.png" alt="updateimg" />
+          </div>
+          <br />
+          <br />
+          <br />
         </div>
       </section>
     </>
