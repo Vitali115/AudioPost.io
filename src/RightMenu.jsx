@@ -68,25 +68,8 @@ export default function Homepage() {
       <section className="trend--feed">
         <div>
           <br />
-          <h2>Update</h2>
-          <hr />
-
-          {update.map((el) => {
-            const { tag, date } = el;
-            return (
-              <div className="trend--option">
-                {/* <RiBookmarkLine /> */}
-                <p>{tag}</p>
-                <p>{date}</p>
-                <div className="post--data--played"></div>
-              </div>
-            );
-          })}
-          <br />
-          <br />
           <h2>Trends from world</h2>
           <hr />
-
           <section>
             {trends.map((el) => {
               const { tag } = el;
@@ -103,12 +86,28 @@ export default function Homepage() {
           <br />
           <h2>Alpha v.0.0.0</h2>
           <hr />
+          {update.map((el) => {
+            const { tag, date } = el;
+            return (
+              <div className="trend--option">
+                {/* <RiBookmarkLine /> */}
+                <p>{tag}</p>
+                <p>{date}</p>
+                <div className="post--data--played"></div>
+              </div>
+            );
+          })}
           <div className="update--box">
-            <img src="https://i.ibb.co/BCnfzG6/card.png" alt="updateimg" />
+            <img
+              src="https://i.ibb.co/4WV8m2t/Nuovo-progetto-1.png"
+              alt="updateimg"
+            />
           </div>
-          <br />
-          <br />
-          <br />
+
+          <div className="legal--">
+            <h2>AudioPost® 2022</h2>
+            <p>Privacy Policy - Cookie Policy - Termini di Servizio</p>
+          </div>
         </div>
       </section>
     </>

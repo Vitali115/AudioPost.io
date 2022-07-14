@@ -12,7 +12,19 @@
   color: white;
   background-color: black;
 }
+input{
+  border: 2px solid rgb(15, 15, 15);
+  background-color: rgb(29, 29, 29);
+  color: white;
 
+}
+textarea:focus, input:focus {
+  color: white;
+}
+
+input, select, textarea{
+  color: white;
+}
 .audio1 {
   background: transparentize(rgb(255, 255, 255), 0.9);
 
@@ -20,7 +32,7 @@
 }
 
 .record--button {
-  background: linear-gradient(-25deg, #00ffb1, black, #0a0a0a);
+  background: linear-gradient(-25deg, #20ffcf, black, #0a0a0a);
   background-size: 200% 200%;
   animation: gradient 5s ease infinite;
 
@@ -50,6 +62,18 @@
   }
 }
 
+.record--interactionss{
+  display: flex;
+  border: 2px solid rgb(15, 15, 15);
+  background-color: rgb(12, 12, 12);
+  padding: 1px 30px 0 20px;
+  border-radius: 8px;
+
+  padding-top: 5px;
+}
+.record--interactionss:hover{
+  border: 2px solid rgb(41, 41, 41);
+}
 .record--interactions{
   display: flex;
   border: 1px solid white;
@@ -57,7 +81,79 @@
   border-radius: 8px;
   padding-top: 5px;
 }
+.record--interactions-{
+  display: flex;
+  border: 2px solid rgb(0, 0, 0);
 
+  padding: 1px 30px 0 20px;
+  border-radius: 8px;
+
+  padding-top: 5px;
+}
+.record--interactions-:hover{
+
+  background-color: rgb(12, 12, 12);
+}
 .wawe--recorded{
-  margin-bottom: 35px;
+margin-left: 15%;
+  width: 85%;
+  padding-bottom: 20px;
+}
+.play--butt{
+  margin-bottom: -135px;
+  margin-top: 60px;
+}
+
+
+.target{
+.post--data--user{
+background-color: black;
+border-radius: 12px;
+width: 100%;
+
+  img{
+    width: 45px;
+
+  }
+}
+}
+
+.button--record{
+
+}
+
+
+.done-{
+  
+  margin: -10px 1px 5px;
+  .button--done{
+    display: flex;
+    
+    justify-content: center;
+    border: 2px solid rgb(15, 15, 15);
+    background-color: rgb(12, 12, 12);
+    padding: 1px 30px 0 20px;
+    border-radius: 8px;
+ width: 549px;
+ 
+    padding-top: 5px;
+    @media screen and (max-width: 650px){
+      width: 77vw;
+    }
+  }
+}
+
+.explore--grid{
+  margin-left: 15px;
+  display: flex;
+  
+  .post{
+    margin-top: -20px;
+    margin-bottom: -10px;
+    width: 5vw;
+    img{
+      width: 40px;
+  
+    }
+  }
 }

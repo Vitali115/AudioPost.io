@@ -18,10 +18,13 @@ import {
   RiSearchLine,
   RiSettings4Line,
   RiNotificationLine,
-  RiArrowLeftRightLine
+  RiArrowLeftRightLine,
+  RiChat3Line
 } from "react-icons/ri";
 
 import IconButton from "@material-ui/core/IconButton";
+
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import "./styles.scss";
 
@@ -47,7 +50,7 @@ export default function Header() {
         <img src="https://i.ibb.co/mBP0YGb/Raggruppa-19.png" alt="logo" />
         <div style={{ marginTop: "-5px" }}>
           <div className="header--interactions">
-            <input className="header--input" placeholder="Search" />
+            <input className="header--input" placeholder="Cerca" />
             <IconButton className="header--search">
               <RiSearchLine style={{ color: "white" }} />
             </IconButton>
@@ -57,14 +60,16 @@ export default function Header() {
         <div className="header--user--interactions">
           <RiNotificationLine className="ico" />
 
-          <RiChat1Line className="ico" />
-          <img
-            style={{
-              borderRadius: 100
-            }}
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Solid_white_bordered.svg/600px-Solid_white_bordered.svg.png"
-            alt="comments--avatar"
-          />
+          <RiChat3Line className="ico" />
+          <Link to="/user/">
+            <img
+              style={{
+                borderRadius: 100
+              }}
+              src="https://scontent.ftrn1-1.fna.fbcdn.net/v/t1.18169-9/408385_476637849071030_1912827395_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=MfzZuxJPHngAX8AfoiW&_nc_ht=scontent.ftrn1-1.fna&oh=00_AT9OKhxi3GMaKp-KDkz1-T_3Ad6iNAv7siU1Pverpo9cmw&oe=62F52A26"
+              alt="comments--avatar"
+            />
+          </Link>
         </div>
         {/* <div
               className="header--option"

@@ -38,15 +38,21 @@ function Profile() {
           <div className="post--data--user">
             <IconButton>
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Solid_white_bordered.svg/600px-Solid_white_bordered.svg.png"
+                src="https://scontent.ftrn1-1.fna.fbcdn.net/v/t1.18169-9/408385_476637849071030_1912827395_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=MfzZuxJPHngAX8AfoiW&_nc_ht=scontent.ftrn1-1.fna&oh=00_AT9OKhxi3GMaKp-KDkz1-T_3Ad6iNAv7siU1Pverpo9cmw&oe=62F52A26"
                 alt="post--avatar"
-                style={{ height: 45, width: 45, borderRadius: "100%" }}
+                style={{ width: 90, borderRadius: "100%" }}
               />
             </IconButton>
 
             <h3>Nome</h3>
           </div>
 
+          <div className="post--interactions--option">
+            <p>PRO </p>
+          </div>
+        </div>
+
+        <div className="account--data-info">
           <div className="post--interactions--option">
             <p>100K Followers</p>
           </div>
@@ -59,10 +65,6 @@ function Profile() {
           <div className="post--interactions--option">
             <RiPlayMiniLine className="ico" />
             <p>2 Bln </p>
-          </div>
-
-          <div className="post--interactions--option">
-            <p>PRO </p>
           </div>
         </div>
 
@@ -109,6 +111,24 @@ function Profile() {
         </div>
       </section>
       <hr />
+      <div className="demoo">
+        {/* <img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/ogre_1f479.png" />
+        <img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/sign-of-the-horns_light-skin-tone_1f918-1f3fb_1f3fb.png" />
+        <img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/nauseated-face_1f922.png" />
+        <img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/alien_1f47d.png" />
+        <img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/kissing-cat_1f63d.png" />
+        <img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/brain_1f9e0.png" />
+        <img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/zombie_1f9df.png" /> */}
+        {/* <img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/comet_2604-fe0f.png" /> */}
+        {/* <img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/pinata_1fa85.png" />
+        <img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/large-green-circle_1f7e2.png" />
+        <img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/spiral-calendar_1f5d3-fe0f.png" />
+        <img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/new-moon-face_1f31a.png" />
+        <img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/lion_1f981.png" />
+        <img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/orangutan_1f9a7.png" />
+<img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/mechanical-arm_1f9be.png"/>
+        <img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/compass_1f9ed.png" /> */}
+      </div>
     </>
   );
 }

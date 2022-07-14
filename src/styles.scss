@@ -6,6 +6,30 @@
 --bgCard: #0A0A0A;
 --radius: 8px;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+ 
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(24, 24, 24);
+  border-radius: var(--radius);
+  
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #00FFB1;
+  padding-left: 5px;
+}
    //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  // // //   
 
 @-webkit-keyframes fadeInFromNone {
@@ -28,7 +52,7 @@
    //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  // // //   
 .App {
   overflow-x: hidden;
-  @media screen and (max-width: 1200px){
+  @media screen and (max-width: 1140px){
     display:none;
   }
 }
@@ -38,6 +62,11 @@ body{
   background-color: black;
   color: white;
   font-family: 'Inter', sans-serif;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 // #waveform {
 //   width: 100%;
@@ -51,37 +80,15 @@ body{
   animation: gradient 12s ease infinite;
   width: 730px;
   padding: 5px;
-  margin: 0 2%;
+ 
   border-radius: var(--radius);
   margin-bottom: 20px;
-
+  animation: fadeIn 0.8s;
   .post--acc{
     display: flex;
     justify-content: space-between;
     padding: 1px;
-    .post--data--user{
 
-      h3, p{
-        margin-top: 20px;
-      }
-      margin-bottom: -6px;
-      display: flex;
-    p{
-      border-left: 2px solid var(--bgCard);
-      margin-left: 5px;
-      color: grey;
-    }
-
-      h3{
-  
-font-size: var(--title);
-      }
-      img{
-        width: 35px;
-        height: 35px;
-        border-radius: 100%;
-      }
-    }
   }
   .post--audio--progress--interactions{
     display: flex;
@@ -93,7 +100,7 @@ font-size: var(--title);
     }
 }
 .post--dynamic--comments{
-  margin: 20px 0;
+  margin: 20px 0 0;
   display: flex;
   
   }
@@ -101,6 +108,20 @@ font-size: var(--title);
     display: flex;
     justify-content: space-between;
     margin: 1% 4%;
+    .ico{
+      margin-right: 4px;
+    }
+    .post--interactions--option{
+      padding: 12px 35px 3px;
+    }
+    .post--interactions--option:hover{
+      background-color: #222222;
+      user-select: none;
+      -moz-user-select: none;
+      -khtml-user-select: none;
+      -webkit-user-select: none;
+      -o-user-select: none;
+    }
     
   }
 }
@@ -129,21 +150,29 @@ font-size: var(--title);
 }
 .post--text{
 
+
   h2{
     padding-left: 15px;
     font-size: 2px;
+    margin-top: -16px;
 }
 }
 
 .post--interactions--option{
   display: flex;
+  margin-top: 5px;
 
   padding-bottom: 0;
   line-height: 1;
+  border-radius: var(--radius);
+  :focus {
+    background-color: rgb(128, 128, 128);
+  }
 }
 
 .post--acc{
   .post--interactions--option{
+    
     padding-top: 12px;
   margin-top: 16px;
   }
@@ -174,16 +203,14 @@ align-items: center;
   backdrop-filter: blur(20px);
 position: fixed;
 
-padding: 10px 10% ;
+padding: 10px 1.5%  ;
 display: flex;
 justify-content: space-between;
 
-@media screen and (min-width: 1600px){
-  padding: 10px 20% ;
-}
+
 
 img{
-height: 32px;
+height: 30px;
 
 }
 
@@ -191,6 +218,7 @@ height: 32px;
   background-color: rgb(41, 41, 41);
   border-radius: var(--radius);
 padding-left: 10px;
+
 
   input{
     background-color: rgb(41, 41, 41);
@@ -200,7 +228,7 @@ padding-left: 10px;
 }
 .user--menu--interactions{
   position: fixed;
-  margin-right: 940px;
+ left: 1%;
 width: 200px;
   .menu--option{
     padding-top: 12px;
@@ -229,18 +257,18 @@ p{
 
 .trend--feed{
   position: fixed;
-  margin-left: 1000px;
-  width: 200px;
+ right: 1%;
+  max-width: 200px;
 h2{
   font-size: var(--title);
 }
 .trend--option{
   background-color: black;
-  padding: 6px 7px;
+  padding: 6px 6px;
   border-radius: var(--radius);
   margin-bottom: 20px;
   display: flex;
-  width: 250px;
+
   justify-content: space-between;
 
 }
@@ -388,8 +416,14 @@ margin-right: 4px;
 }
 
 .update--box{
+  // background-color: var(--bgCard);
+  background: linear-gradient(165deg, #202020, black, #0a0a0a);
+  background-size: 200% 200%;
+  animation: gradient 5s ease infinite;
+  border-radius: var(--radius);
   img{
     height: 230px;
+    margin-left: 13px;
     border-radius: var(--radius);
     
   }
@@ -416,9 +450,9 @@ margin-right: 4px;
     border-radius: var(--radius);
     padding: 6px 10px 9px;
     padding-left: 10px;
-    border: 2px solid #222222;
-    max-width: 500px;
-    min-width: 400px;
+    border: 2px solid #3a3a3a;
+    max-width: 600px;
+    min-width: 600px;
   background-color : transparent;
 
   }
@@ -434,5 +468,141 @@ margin-right: 4px;
 .header--user--interactions{
   .ico{
     margin-top: 5px;
+  }
+}
+.comment-post{
+  margin-left: 6px;
+  width: 400px;
+  padding: 8px;
+  border-radius: 12px ;
+  padding-left: 15px;
+  
+}
+.post--user--option{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(45deg, rgb(29, 29, 29), black , rgb(29, 29, 29), #0a0a0a) ,rgb(29, 29, 29);
+  background-size: 170% 200%;
+
+  width: 730px;
+  padding: 5px;
+  margin: 0 ;
+  border-radius: var(--radius);
+  margin-bottom: 20px;
+}
+
+.ico--com, .ico--red{
+
+font-weight: bold;
+}
+.ico--com{
+  color: white;
+}
+.ico--rec{
+  color: black;
+
+  
+}
+
+
+
+.record--comment-button, .done--comment-button{
+  background-color: rgb(22, 22, 22);
+  padding: 0 30px;
+  border-radius: var(--radius);
+}
+.record--comment-button{
+  background-color: #00FFB1;
+}
+.account--data-info{
+  padding: 8px 10px 0;
+  display: flex;
+  justify-content: left;
+  .post--interactions--option{
+    margin-right: 25px;
+ 
+  }
+}
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+a:active {
+  color: white;
+  text-decoration: none;
+}
+
+.legal--{
+  margin-top:10px;
+  h2{
+    font-size: 12px;
+  }
+  p{
+    font-size: 11px;
+  }
+}
+.option{
+  font-size: 25px;
+  
+}
+
+.demoo{
+  width: 200px;
+
+}
+
+.explore--grid{
+max-width: 1200px;
+margin: 20px 0;
+.post:hover{
+  border: 2px solid rgb(27, 27, 27);
+}
+  .post{
+    padding-left: 15px ;
+    max-width: 30%;
+    border: 2px solid rgb(0, 0, 0);
+    margin-right: 15px;
+img{
+  width: 70px;
+}
+  }
+}
+.post--data--user{
+
+  h3{
+    margin-top: 15px;
+  }
+  margin-bottom: -6px;
+  display: flex;
+  div{
+    p{
+      border-left: 2px solid var(--bgCard);
+      font-size: 14px;
+      color: grey;
+      margin-top: -6px;
+    }
+  }
+
+
+  h3{
+
+font-size: 18px;
+  }
+  img{
+    width: 40px;
+
+    border-radius: 100%;
   }
 }

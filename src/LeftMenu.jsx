@@ -18,12 +18,17 @@ import {
   RiSearchLine,
   RiSettings4Line,
   RiNotificationLine,
-  RiArrowLeftRightLine
+  RiArrowLeftRightLine,
+  RiMic2Line,
+  RiRadio2Line,
+  RiDiscLine
 } from "react-icons/ri";
 
 import "./styles.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import {
   faChevronRight,
@@ -42,23 +47,41 @@ export default function LeftMenu() {
   return (
     <>
       <section className="user--menu--interactions">
-        <br />
+        <hr />
+        <Link to="/">
+          <div className="menu--option">
+            <RiHome2Line className="ico" />
+            <p>Home</p>
+          </div>
+        </Link>
+        <Link to="/explore">
+          <div className="menu--option">
+            <RiEarthLine className="ico" />
+            <p>Esplora</p>
+          </div>
+        </Link>
+        <hr />
         <div className="menu--option">
-          <RiHome2Line className="ico" />
-          <p>Home</p>
+          <RiRadio2Line className="ico" />
+          <p>Radio</p>
         </div>
         <div className="menu--option">
-          <RiEarthLine className="ico" />
-          <p>Explore</p>
+          <RiMic2Line className="ico" />
+          <p>Podcast</p>
         </div>
-
         {/* <div className="menu--option">
           <RiNotificationLine className="ico" />
           <p>Notifications</p>
         </div> */}
+
+        <div className="menu--option">
+          <RiDiscLine className="ico" />
+          <p>Musica</p>
+        </div>
+        <hr />
         <div className="menu--option">
           <RiBookmarkLine className="ico" />
-          <p>Saved</p>
+          <p>Salvati</p>
         </div>
         {/* <div className="menu--option">
           <img
@@ -69,20 +92,21 @@ export default function LeftMenu() {
         </div> */}
         <div className="menu--option">
           <RiSettings4Line className="ico" />
-          <p>Settings</p>
+          <p>Impostazioni</p>
         </div>
+
         <div
           className="menu--option"
           style={{
             backgroundColor: "#00FFB1",
             color: "black",
-            fontWeight: "bold",
-            marginTop: "100px"
+            fontWeight: "bold"
+            // marginTop: "100px"
           }}
         >
           <RiMicLine className="ico" />
 
-          <p>Post</p>
+          <p>Registra</p>
         </div>
       </section>
     </>

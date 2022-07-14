@@ -7,6 +7,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 //              screen         //
 import HomePage from "./HomePage";
+import User from "./User";
+import Explore from "./Explore";
 
 //               app            //
 export default function App() {
@@ -16,7 +18,8 @@ export default function App() {
         <div className="App">
           <Switch />
           <Route path="/" exact component={HomePage} />
-
+          <Route path="/user/" exact component={User} />
+          <Route path="/explore" exact component={Explore} />
           <Switch />
         </div>
       </Router>
