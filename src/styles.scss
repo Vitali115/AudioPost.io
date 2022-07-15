@@ -112,6 +112,7 @@ body{
       margin-right: 4px;
     }
     .post--interactions--option{
+      
       padding: 12px 35px 3px;
     }
     .post--interactions--option:hover{
@@ -368,7 +369,7 @@ $animationSpeed: 40s;
   line-height: 1;
   height: 23px;
 img{
-width: 20px;
+
 height: 20px;
 border-radius: 100px;
 margin-left: -2px;
@@ -392,7 +393,7 @@ margin-right: 4px;
 }
 .profile--interactions{
   display: flex;
-  background-color: #0D0D0D;
+  background-color: rgb(24, 24, 24);
   padding: 12px 50px 1px ;
   border-radius: var(--radius);
   margin-right: 15px;
@@ -605,4 +606,54 @@ font-size: 18px;
 
     border-radius: 100%;
   }
+}
+
+.speaker--hosts{
+  display: flex;
+  .post--comments{
+    border-radius: 6px;
+    
+  }
+}
+
+
+.radio--options{
+
+  display: flex;
+
+  .ico{
+    color: black;
+    font-size: 55px;
+   
+    background-color: white;
+    
+    border-radius: 100%;
+  }
+  }
+.radio--data-info{
+  .radio--datas{
+    margin-top: -10px;
+  }
+}
+
+.host--box{
+margin-bottom: 5px;
+margin-left: 5px;
+  .post--comments{
+    line-height: 2;
+    img{
+      height: 20px;
+
+    }
+    h4{    font-size: 16px;}
+
+  }
+}
+
+.radio--name{
+  margin-top: 6px;
+  margin-bottom: 0px;
+}
+.radio--img{
+  margin-left: -9px;
 }

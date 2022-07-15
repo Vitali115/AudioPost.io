@@ -6,9 +6,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 //               comp          //
 
 //              screen         //
-import HomePage from "./HomePage";
-import User from "./User";
-import Explore from "./Explore";
+import HomePage from "./pages/HomePage";
+import User from "./pages/User";
+import Explore from "./pages/Explore";
+import RadioUser from "./pages/RadioUser";
 
 //               app            //
 export default function App() {
@@ -18,8 +19,10 @@ export default function App() {
         <div className="App">
           <Switch />
           <Route path="/" exact component={HomePage} />
-          <Route path="/user/" exact component={User} />
+          <Route path="/home" exact component={HomePage} />
+          <Route path="/user" exact component={User} />
           <Route path="/explore" exact component={Explore} />
+          <Route path="/radio" exact component={RadioUser} />
           <Switch />
         </div>
       </Router>

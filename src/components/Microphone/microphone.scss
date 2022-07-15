@@ -95,12 +95,12 @@ input, select, textarea{
   background-color: rgb(12, 12, 12);
 }
 .wawe--recorded{
-margin-left: 15%;
-  width: 85%;
-  padding-bottom: 20px;
+margin-left: 12%;
+  width: 89%;
+  padding-bottom: 2px;
 }
 .play--butt{
-  margin-bottom: -135px;
+  margin-bottom: -130px;
   margin-top: 60px;
 }
 
@@ -143,17 +143,24 @@ width: 100%;
   }
 }
 
-.explore--grid{
-  margin-left: 15px;
-  display: flex;
+.explore--grids{
   
+  display: flex;
+  margin: 20px 10px;
   .post{
+    border: 2px solid rgb(0, 0, 0);
+    margin-right: 13px;
+    padding-left: 10px ;
     margin-top: -20px;
-    margin-bottom: -10px;
-    width: 5vw;
+    margin-bottom: -7px;
+    width: 65px;
     img{
       width: 40px;
   
     }
+  
+  }
+  .post:hover{
+    border: 2px solid rgb(27, 27, 27);
   }
 }

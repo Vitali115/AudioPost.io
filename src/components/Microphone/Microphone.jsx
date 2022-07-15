@@ -80,7 +80,7 @@ export default function Microphone({ pushFile }) {
       waveColor: "grey",
       progressColor: "#00FFB1",
       height: 200,
-      cursorWidth: 9,
+      cursorWidth: 6,
       cursorColor: "#00FFB1",
       barWidth: 3,
       normalize: true,
@@ -174,13 +174,14 @@ export default function Microphone({ pushFile }) {
         open={open}
         onClose={handleCancel}
       >
-        <div
+        <div 
           style={{
             backgroundColor: "black",
             textAlign: "center",
             border: "2px solid white",
             display: "flex",
-            justifyContent: "space-between"
+            justifyContent: "space-between",
+     
           }}
         >
           {!record && tempFile && (
@@ -353,7 +354,7 @@ export default function Microphone({ pushFile }) {
                     </div>
                   </IconButton>
                 </Grid>
-                <Grid className="explore--grid">
+                <Grid className="explore--grids">
                   <section className="post">
                     <img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/lion_1f981.png" />
                   </section>
